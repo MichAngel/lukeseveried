@@ -1,0 +1,236 @@
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  list-style: none;
+  text-decoration: none; }
+
+.container {
+  padding: 1rem;
+  margin: auto;
+  overflow: hidden; }
+
+.btn-main, .btn-light, .btn-dark {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  transition: all 0.5s;
+  border: none;
+  cursor: pointer; }
+
+.btn-main {
+  color: #333;
+  background-color: #eeebd9; }
+
+.btn-light {
+  color: #333;
+  background-color: #f4f4f4; }
+
+.btn-dark {
+  color: #f4f4f4;
+  background-color: #333; }
+
+button[class^="btn-"]:hover,
+a[class^="btn-"]:hover,
+input[class^="btn-"]:hover {
+  background-color: red; }
+
+.bg-main {
+  background: #eeebd9;
+  color: #000; }
+
+.bg-dark {
+  background: #333;
+  color: #fff; }
+
+.bg-light {
+  background: #f4f4f4;
+  color: #000; }
+
+.bg-medium {
+  background: navy;
+  color: #fff; }
+
+.lead {
+  font-size: 1.3rem;
+  margin-bottom: 2rem; }
+
+.text-center {
+  text-align: center;
+  align-content: center; }
+
+.py-1 {
+  padding: 1rem 0; }
+
+.py-2 {
+  padding: 2rem 0; }
+
+.py-3 {
+  padding: 3rem 0; }
+
+.py-4 {
+  padding: 4rem 0; }
+
+.my-1 {
+  margin: 1rem 0; }
+
+.my-2 {
+  margin: 2rem 0; }
+
+.my-3 {
+  margin: 3rem 0; }
+
+.my-4 {
+  margin: 4rem 0; }
+
+#main-nav {
+  background: #333;
+  color: #f4f4f4; }
+  #main-nav ul {
+    display: flex;
+    justify-content: space-around; }
+    #main-nav ul a {
+      text-decoration: none;
+      color: #f4f4f4; }
+      #main-nav ul a:hover {
+        transition: all 0.5sec;
+        color: red; }
+
+#hero-img {
+  display: block;
+  text-align: center;
+  overflow: hidden;
+  min-width: 100%; }
+
+#hero-img-small {
+  display: none;
+  text-align: center;
+  overflow: hidden; }
+
+#home-intro {
+  width: 80%; }
+  #home-intro h1 {
+    font-size: 2rem;
+    padding-bottom: 1rem; }
+  #home-intro p {
+    padding-top: 1rem;
+    border-top: dotted 1px red; }
+
+#about-content {
+  display: flex; }
+  #about-content h1 {
+    font-size: 3rem;
+    border-bottom: 1px dotted red; }
+
+.about-container {
+  display: flex;
+  background: #333;
+  border-radius: 5rem;
+  margin: 1rem; }
+  .about-container p {
+    padding: 1rem;
+    color: #eeebd9; }
+  .about-container img {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    padding: 2rem;
+    border-radius: 50%; }
+
+.section-title {
+  font-size: 1.75rem;
+  line-height: 2rem;
+  padding-bottom: 0.5rem; }
+  .section-title a {
+    color: #333;
+    font-size: 1.75rem; }
+
+#contact-a .text-fields {
+  display: grid;
+  grid-template-areas: "name email" "subject phone" "message message";
+  grid-gap: 1.2rem;
+  margin-bottom: 1rem; }
+  #contact-a .text-fields .name-input {
+    grid-area: name;
+    height: 1rem; }
+  #contact-a .text-fields .subject-input {
+    grid-area: subject;
+    height: 2rem; }
+  #contact-a .text-fields .email-input {
+    grid-area: email;
+    height: 2rem; }
+  #contact-a .text-fields .phone-input {
+    grid-area: phone;
+    height: 2rem; }
+  #contact-a .text-fields .message-input {
+    grid-area: message;
+    height: 6rem; }
+  #contact-a .text-fields .text-input {
+    padding: 0.5rem 0rem; }
+
+#contact-a button[type="submit"] {
+  width: 50%; }
+
+#footer-container {
+  position: absolute;
+  bottom: 0;
+  height: 3rem;
+  font-size: 1.5rem;
+  background: #333;
+  color: #eeebd9;
+  width: 100%; }
+  #footer-container p {
+    font-size: 0.5rem;
+    line-height: 1.5rem; }
+  #footer-container ul {
+    display: flex;
+    justify-content: center; }
+  #footer-container li {
+    padding-right: 1rem;
+    padding-top: 0.5rem; }
+    #footer-container li a {
+      color: #eeebd9; }
+    #footer-container li i:hover {
+      color: red; }
+
+.footer-copyright {
+  background: #333; }
+
+@media (max-width: 800px) {
+  #main-nav ul {
+    display: block;
+    line-height: 1.5rem;
+    font-size: 1rem;
+    text-align: center;
+    padding-top: 0.5rem; }
+  .about-container {
+    display: block;
+    border-radius: 1rem; }
+    .about-container img {
+      display: none; } }
+
+@media (max-width: 479px) {
+  #main-nav {
+    flex-direction: column; }
+  .section-title {
+    font-size: 1rem;
+    line-height: 1.5rem; }
+    .section-title h3 {
+      font-size: 1.5rem; }
+  #contact-a .text-fields {
+    display: block; }
+  #hero-img {
+    display: none; }
+  #hero-img-small {
+    display: block;
+    padding-top: 1rem; }
+  #about-content h1 {
+    line-height: 2.5rem;
+    font-size: 2rem; }
+  .about-container {
+    display: block; }
+    .about-container img {
+      display: none; }
+    .about-container .about-p {
+      border-bottom: 1px dotted white; } }

@@ -1,0 +1,29 @@
+$main-color: #eeebd9;
+$light-color: #f4f4f4;
+$dark-color: #333;
+$medium-color: navy;
+$special-color: red;
+
+$bg-dark: #333;
+$bg-light: #5b5b5b;
+$bg-aux: #38359c;
+
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+
+// Set Text Color
+
+@function set-text-color($color) {
+  @if (lightness($color) > 50) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}

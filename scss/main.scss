@@ -1,0 +1,226 @@
+@import "config";
+@import "utilities";
+
+//Nav-Bar
+#main-nav {
+  background: $dark-color;
+  color: $light-color;
+  ul {
+    display: flex;
+    justify-content: space-around;
+    a {
+      text-decoration: none;
+      color: $light-color;
+      &:hover {
+        transition: all 0.5sec;
+        color: $special-color;
+      }
+    }
+  }
+}
+
+//Home Page
+//Hero Img
+#hero-img {
+  display: block;
+  text-align: center;
+  overflow: hidden;
+  min-width: 100%;
+}
+#hero-img-small {
+  display: none;
+  text-align: center;
+  overflow: hidden;
+}
+
+//Home Text Section
+#home-intro {
+  width: 80%;
+  & h1 {
+    font-size: 2rem;
+    padding-bottom: 1rem;
+  }
+  & p {
+    padding-top: 1rem;
+    border-top: dotted 1px $special-color;
+  }
+}
+
+//About Intro Text
+#about-content {
+  display: flex;
+  & h1 {
+    font-size: 3rem;
+    border-bottom: 1px dotted $special-color;
+  }
+}
+
+.about-container {
+  display: flex;
+  background: $dark-color;
+  border-radius: 5rem;
+  margin: 1rem;
+  & p {
+    padding: 1rem;
+    color: $main-color;
+  }
+  & img {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    padding: 2rem;
+    border-radius: 50%;
+  }
+}
+
+//Contact Form
+.section-title {
+  font-size: 1.75rem;
+  line-height: 2rem;
+  padding-bottom: 0.5rem;
+  & a {
+    color: $dark-color;
+    font-size: 1.75rem;
+  }
+}
+#contact {
+  &-a {
+    .text-fields {
+      display: grid;
+      grid-template-areas:
+        "name email"
+        "subject phone"
+        "message message";
+      grid-gap: 1.2rem;
+      margin-bottom: 1rem;
+
+      //Grid Area
+
+      .name-input {
+        grid-area: name;
+        height: 1rem;
+      }
+      .subject-input {
+        grid-area: subject;
+        height: 2rem;
+      }
+      .email-input {
+        grid-area: email;
+        height: 2rem;
+      }
+      .phone-input {
+        grid-area: phone;
+        height: 2rem;
+      }
+      .message-input {
+        grid-area: message;
+        height: 6rem;
+      }
+
+      .text-input {
+        padding: 0.5rem 0rem;
+      }
+    }
+
+    button[type="submit"] {
+      width: 50%;
+    }
+  }
+}
+
+//Footer
+
+#footer-container {
+  position: absolute;
+  bottom: 0;
+  height: 3rem;
+  font-size: 1.5rem;
+  background: $bg-dark;
+  color: $main-color;
+  width: 100%;
+  & p {
+    font-size: 0.5rem;
+    line-height: 1.5rem;
+  }
+  & ul {
+    display: flex;
+    justify-content: center;
+  }
+
+  & li {
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    & a {
+      color: $main-color;
+    }
+    & i:hover {
+      color: $special-color;
+    }
+  }
+}
+
+.footer-copyright {
+  background: $dark-color;
+}
+
+//Media Queries
+
+// Tablets & Smaller
+@media (max-width: 800px) {
+  #main-nav {
+    & ul {
+      display: block;
+      line-height: 1.5rem;
+      font-size: 1rem;
+      text-align: center;
+      padding-top: 0.5rem;
+    }
+  }
+  .about-container {
+    display: block;
+    border-radius: 1rem;
+    & img {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 479px) {
+  #main-nav {
+    flex-direction: column;
+  }
+  .section-title {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    & h3 {
+      font-size: 1.5rem;
+    }
+  }
+  #contact {
+    &-a {
+      .text-fields {
+        display: block;
+      }
+    }
+  }
+  #hero-img {
+    display: none;
+  }
+  #hero-img-small {
+    display: block;
+    padding-top: 1rem;
+  }
+  #about-content h1 {
+    line-height: 2.5rem;
+    font-size: 2rem;
+  }
+  .about-container {
+    display: block;
+    & img {
+      display: none;
+    }
+    & .about-p {
+      border-bottom: 1px dotted white;
+    }
+  }
+}

@@ -22,16 +22,17 @@
       </nav>
     </header>
 
-    <section class="calender">
-      <!-- Calender from Google Calenders (Need to embed with desired calender from google) -->
-      <iframe
-        src="https://calendar.google.com/calendar/
-        style="border-width:0"
-        width="100%"
-        height="75vh"
-        frameborder="0"
-        scrolling="no"
-      ></iframe>
+    <section class="shows-main text-center">
+      <h2 class="shows-heading">Upcoming Events</h2>
+      <p class="shows-text">
+        Scheduled events are listed below. Pick a day to come bust your gut.
+      </p>
+    </section>
+
+    <!-- Div for injection of google calendar information -->
+
+    <section id="calendar" class="text-center">
+      <div class="text-center calendar-content"></div>
     </section>
 
     <!-- Footer Content -->
@@ -61,7 +62,9 @@
         </div>
       </div>
     </footer>
-
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script src="/dist/js/calender.js"></script>
+    <script src="/dist/js/ui.js"></script>
     <script src="https://kit.fontawesome.com/b379ce2ae4.js"></script>
   </body>
 </html>

@@ -1,6 +1,3 @@
-//Init http function
-const http = new EasyHTTP
-
 //Event Data
 
 const data = {
